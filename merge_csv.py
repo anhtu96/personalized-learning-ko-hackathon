@@ -25,16 +25,11 @@ def merge(dataset_name):
     df = pd.DataFrame(columns=columns)
 
     print(f'Merging {len(filenames)} .csv files from folder {os.path.join(FOLDER, dataset_name)}...')
-    cnt = 0
     for fname in tqdm.tqdm(filenames):
         user_id = int(fname.split('.csv')[0][1:])
         tmp_df = pd.read_csv(os.path.join(os.path.join(FOLDER, dataset_name), fname))
         tmp_df['user_id'] = user_id
         df = pd.concat([df, tmp_df])
-        cnt += 1
-        if cnt > 5:
-            break
-
     df.to_csv(f'datasets/{dataset_name}_merged.csv', index=False)
     print(f'Done! Merged file saved to {os.path.join(FOLDER, dataset_name)}')
 
