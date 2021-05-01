@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__
+.ipynb_checkpoints
+.vscode
+*.ipynb
+env
+
+# ignore large data files
+datasets/*
+
+# keep datasets folder
+!datasets/.gitignore
