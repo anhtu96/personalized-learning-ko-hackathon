@@ -12,3 +12,11 @@
     DATASET can either be:
     - ```all```: merge KT1, KT2, KT3, KT4 sequentially.
     - ```KT1```, ```KT2```, ```KT3``` or ```KT4```: merge only one of these dataset each time. 
+
+3. Question, timestamp and lecture analysis is included in ipynb files
+
+### Contributors
+
+- Tu A. Ngo
+
+- Hung V. To
